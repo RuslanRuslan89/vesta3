@@ -3,95 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vesta Serggeva Beauty - профессиональное окрашивание и инкапсуляция волос в современном салоне.">
+  <meta name="description" content="Vesta Serggeva Beauty — профессиональное окрашивание и инкапсуляция волос.">
   <title>Vesta Serggeva Beauty</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <style>
+    body { font-family: 'Montserrat', sans-serif; color: #333; background: #fff; }
+    .hero { background: url('hero.jpg') center/cover no-repeat; height: 90vh; }
+    h1, h2 { font-weight: 600; }
+    .btn-primary { background: #A67873; border: none; }
+    .btn-primary:hover { background: #8B5E5A; }
+    footer { background: #222; color: #fff; }
+    .swiper-slide { font-size: 1.2rem; padding: 30px; background: #f8f8f8; border-radius: 10px; }
+    .card img { height: 250px; object-fit: cover; }
+  </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="bg-light py-3 border-bottom">
+  <header class="bg-light py-3 border-bottom fixed-top">
     <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="logo fs-3">Vesta Serggeva Beauty</h1>
+      <h1 class="fs-3">Vesta Serggeva Beauty</h1>
       <nav>
-        <a href="#services" class="mx-2">Услуги</a>
-        <a href="#about" class="mx-2">О нас</a>
-        <a href="#gallery" class="mx-2">Галерея</a>
-        <a href="#contact" class="mx-2">Контакты</a>
+        <a href="#services" class="mx-2 nav-link d-inline">Услуги</a>
+        <a href="#about" class="mx-2 nav-link d-inline">О нас</a>
+        <a href="#gallery" class="mx-2 nav-link d-inline">Галерея</a>
+        <a href="#contact" class="mx-2 nav-link d-inline">Контакты</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero text-center text-white d-flex align-items-center justify-content-center" style="background-image: url('hero.jpg'); height: 90vh; background-size: cover; background-position: center;">
-    <div>
-      <h2 class="display-4 mb-3">Идеальные волосы — это просто</h2>
-      <a href="#contact" class="btn btn-dark btn-lg">Записаться</a>
-    </div>
-  </section>
+  <main style="margin-top:80px;">
 
-  <!-- Services Section -->
-  <section id="services" class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Наши услуги</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow">
-            <img src="coloring.jpg" class="card-img-top" alt="Hair Coloring">
-            <div class="card-body">
-              <h5 class="card-title">Окрашивание</h5>
-              <p class="card-text">Современные техники и индивидуальный подход для идеального оттенка.</p>
+    <!-- Hero -->
+    <section class="hero d-flex align-items-center justify-content-center text-white text-center">
+      <div>
+        <h2 class="display-4 mb-3">Идеальные волосы — это просто</h2>
+        <a href="#contact" class="btn btn-dark btn-lg">Записаться</a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Наши услуги</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+              <img src="coloring.jpg" class="card-img-top" alt="Окрашивание">
+              <div class="card-body">
+                <h5 class="card-title">Окрашивание</h5>
+                <p>Индивидуальный подбор оттенка и техники для вашего образа.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow">
-            <img src="encapsulation.jpg" class="card-img-top" alt="Encapsulation">
-            <div class="card-body">
-              <h5 class="card-title">Инкапсуляция</h5>
-              <p class="card-text">Восстановление и защита волос для безупречного блеска и здоровья.</p>
+          <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+              <img src="encapsulation.jpg" class="card-img-top" alt="Инкапсуляция">
+              <div class="card-body">
+                <h5 class="card-title">Инкапсуляция</h5>
+                <p>Восстановление и защита волос от повреждений, придание блеска и гладкости.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow">
-            <img src="care.jpg" class="card-img-top" alt="Hair Care">
-            <div class="card-body">
-              <h5 class="card-title">Уход</h5>
-              <p class="card-text">Профессиональный подбор и процедуры для красоты ваших волос.</p>
+          <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+              <img src="care.jpg" class="card-img-top" alt="Уход">
+              <div class="card-body">
+                <h5 class="card-title">Уход</h5>
+                <p>Комплекс процедур для здоровья и красоты ваших волос.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials Slider -->
-  <section class="bg-light py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Отзывы клиентов</h2>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Просто невероятно! Мои волосы — как в рекламе. 💖</div>
-          <div class="swiper-slide">Очень довольна окрашиванием, цвет держится идеально!</div>
-          <div class="swiper-slide">Инкапсуляция изменила мои волосы, они стали плотнее и блестящими.</div>
+    <!-- About -->
+    <section id="about" class="py-5 bg-light text-center">
+      <div class="container">
+        <h2 class="mb-4">О нас</h2>
+        <p class="lead">Vesta Serggeva Beauty — это студия, где ваши волосы превращаются в произведение искусства. Команда профессионалов предложит вам лучшее решение по уходу и окрашиванию волос.</p>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Галерея</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4"><img src="gallery1.jpg" class="img-fluid rounded shadow"></div>
+          <div class="col-md-4 mb-4"><img src="gallery2.jpg" class="img-fluid rounded shadow"></div>
+          <div class="col-md-4 mb-4"><img src="gallery3.jpg" class="img-fluid rounded shadow"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Chart Section -->
-  <section class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Популярность услуг</h2>
-      <canvas id="serviceChart" width="400" height="200"></canvas>
-    </div>
-  </section>
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="mb-4">Отзывы</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Просто невероятно! Мои волосы — как в рекламе. 💖</div>
+            <div class="swiper-slide">Очень довольна окрашиванием, цвет держится идеально!</div>
+            <div class="swiper-slide">Инкапсуляция изменила мои волосы, они стали плотнее и блестящими.</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
+    <!-- Chart -->
+    <section class="py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Популярность услуг</h2>
+        <canvas id="serviceChart" width="400" height="200"></canvas>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="mb-4">Контакты</h2>
+        <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+        <p><strong>Адрес:</strong> Москва, ул. Студийная, 5</p>
+        <a href="mailto:info@vestabeauty.ru" class="btn btn-dark mb-4">Написать на почту</a>
+        <form>
+          <div class="mb-3"><input type="text" class="form-control" placeholder="Ваше имя" required></div>
+          <div class="mb-3"><input type="email" class="form-control" placeholder="Ваш email" required></div>
+          <div class="mb-3"><textarea class="form-control" rows="3" placeholder="Ваше сообщение" required></textarea></div>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-4 mt-5">
     <p class="mb-0">© 2025 Vesta Serggeva Beauty</p>
   </footer>
 
@@ -102,11 +153,11 @@
     const swiper = new Swiper('.mySwiper', {
       slidesPerView: 1,
       loop: true,
-      autoplay: { delay: 3000 },
+      autoplay: { delay: 3500 },
     });
 
     const ctx = document.getElementById('serviceChart').getContext('2d');
-    const serviceChart = new Chart(ctx, {
+    new Chart(ctx, {
       type: 'pie',
       data: {
         labels: ['Окрашивание', 'Инкапсуляция', 'Уход'],
@@ -117,5 +168,6 @@
       }
     });
   </script>
+
 </body>
 </html>
